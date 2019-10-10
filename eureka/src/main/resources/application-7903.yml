@@ -1,0 +1,29 @@
+#服务端口
+server:
+  port: 7903
+
+#应用名称及验证账号
+spring:
+  application:
+    name: eureka
+  security:
+    user:
+      name: root
+      password: root
+
+#注册中心
+eureka:
+  #  server:
+  #    enable-self-preservation: false       #关闭保护机制
+  #    eviction-interval-timer-in-ms: 2000   #剔除失效服务间隔,单位毫秒
+  client:
+    #如果只有自己，填false，有其他的会跳过自己，去其他的中心注册
+    # 检索服务选项，当设置为True(默认值)时，会进行服务检索,注册中心不负责检索服务
+    register-with-eureka: true
+    #服务注册中心也会将自己作为客户端来尝试注册自己,为true（默认）时自动生效
+    fetch-registry: false
+    #设置服务注册中心的URL
+    service-url:
+      defaultZone: http://root:root@eureka-7901:7901/eureka,http://root:root@eureka-7902:7902/eureka
+  instance:
+    hostname: eureka-7903
