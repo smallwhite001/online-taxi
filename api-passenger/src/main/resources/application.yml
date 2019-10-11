@@ -19,7 +19,8 @@ eureka:
   client:
     #设置服务注册中心的URL
     service-url:
-      defaultZone: http://root:root@eureka-7902:7902/eureka,http://root:root@eureka-7903:7903/eureka
+#      defaultZone: http://root:root@eureka-7902:7902/eureka,http://root:root@eureka-7903:7903/eureka
+       defaultZone: http://root:root@eureka-7901:7901/eureka
   instance:
     hostname: localhost
     instance-id: api-passenger

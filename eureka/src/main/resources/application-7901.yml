@@ -18,7 +18,7 @@ eureka:
   #    eviction-interval-timer-in-ms: 2000   #剔除失效服务间隔,单位毫秒
   client:
     register-with-eureka: true
-    fetch-registry: false
+    fetch-registry: true
     #设置服务注册中心的URL
     service-url:
       defaultZone: http://root:root@eureka-7902:7902/eureka,http://root:root@eureka-7903:7903/eureka
